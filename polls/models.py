@@ -6,7 +6,7 @@ from django.utils import timezone
 
 class Question(models.Model):
     question_text = models.CharField(max_length=256)
-    pub_date = models.DateField('date published')
+    pub_date = models.DateTimeField('date published')
     vote = models.IntegerField(default=0)
 
     def was_published_recently(self):
